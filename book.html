@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Book your event with Djm events — fill out our booking form and our team will confirm your event date and discuss details." />
+    <title>Book Your Event | Djm events</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .booking-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 0 80px;
+            background: linear-gradient(160deg, var(--champagne) 0%, var(--white) 40%, var(--gray-light) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .booking-section::before {
+            content: '';
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(201, 168, 76, 0.07) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .input-with-icon {
+            position: relative;
+        }
+
+        .input-with-icon .form-control {
+            padding-right: 44px;
+        }
+
+        .input-icon {
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gold);
+            pointer-events: none;
+            font-size: 1.1rem;
+        }
+
+        .progress-bar {
+            height: 4px;
+            background: var(--gray-light);
+            border-radius: 4px;
+            margin-bottom: 40px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
+            border-radius: 4px;
+            width: 0%;
+            transition: width 0.8s ease;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" aria-label="Djm events Home">
+                <div class="nav-logo-icon"><img src="images/djmlogo.jpg" alt="Djm Events Logo"></div>
+                <span class="nav-logo-text">Djm<span>Events</span></span>
+            </a>
+            <ul class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="categories.html" class="nav-link">Categories</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="book.html" class="btn btn-primary nav-cta active">Book Now</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== BOOKING SECTION ===== -->
+    <section class="booking-section" id="booking-section">
+        <div class="container" style="position:relative; z-index:1;">
+            <div class="booking-wrapper fade-in" id="booking-wrapper">
+
+                <!-- Header -->
+                <div class="booking-header">
+                    <div class="booking-header-icon">✦</div>
+                    <h2>Book Your Event</h2>
+                    <p>Fill in the details below and we'll reach out within 24 hours to confirm.</p>
+                </div>
+
+                <!-- Body -->
+                <div class="booking-body">
+
+                    <!-- Step indicators -->
+                    <div class="booking-steps" role="tablist" aria-label="Booking progress">
+                        <div class="booking-step active" role="tab" aria-selected="true">✦ Personal Info</div>
+                        <div class="booking-step" role="tab" aria-selected="false">Event Details</div>
+                        <div class="booking-step" role="tab" aria-selected="false">Confirm</div>
+                    </div>
+
+                    <!-- Progress bar -->
+                    <div class="progress-bar" aria-label="Booking form progress">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+
+                    <form id="bookingForm" novalidate>
+
+                        <!-- Section 1: Personal Info -->
+                        <div style="margin-bottom:36px;">
+                            <h4
+                                style="font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--dark); margin-bottom:20px; padding-bottom:12px; border-bottom:2px solid var(--champagne);">
+                                👤 Personal Information
+                            </h4>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="book-fullname">Full Name <span class="label-req">*</span></label>
+                                    <div class="input-with-icon">
+                                        <input type="text" id="book-fullname" name="fullname" class="form-control"
+                                            placeholder="John Doe" required autocomplete="name" />
+                                        <span class="input-icon">👤</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="book-email">Email Address <span class="label-req">*</span></label>
+                                    <div class="input-with-icon">
+                                        <input type="email" id="book-email" name="email" class="form-control"
+                                            placeholder="john@example.com" required autocomplete="email" />
+                                        <span class="input-icon">✉</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="book-phone">Phone Number <span class="label-req">*</span></label>
+                                <div class="input-with-icon">
+                                    <input type="tel" id="book-phone" name="phone" class="form-control"
+                                        placeholder="9578380405" required autocomplete="tel" />
+                                    <span class="input-icon">📞</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 2: Event Details -->
+                        <div style="margin-bottom:36px;">
+                            <h4
+                                style="font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--dark); margin-bottom:20px; padding-bottom:12px; border-bottom:2px solid var(--champagne);">
+                                🎉 Event Details
+                            </h4>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="book-event-type">Event Type <span class="label-req">*</span></label>
+                                    <select id="book-event-type" name="event_type" class="form-control" required>
+                                        <option value="" disabled selected>Select event type</option>
+                                        <option value="wedding">💍 Wedding</option>
+                                        <option value="corporate">🏢 Corporate Event</option>
+                                        <option value="birthday">🎂 Birthday Party</option>
+                                        <option value="conference">🎤 Conference / Seminar</option>
+                                        <option value="decoration">🌸 Decoration & Catering</option>
+                                        <option value="other">✨ Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="book-date">Event Date <span class="label-req">*</span></label>
+                                    <div class="input-with-icon">
+                                        <input type="date" id="book-date" name="event_date" class="form-control"
+                                            required />
+                                        <span class="input-icon">📅</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="book-location">Event Location <span class="label-req">*</span></label>
+                                    <div class="input-with-icon">
+                                        <input type="text" id="book-location" name="location" class="form-control"
+                                            placeholder="Venue name or city" required />
+                                        <span class="input-icon">📍</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="book-guests">Estimated Guests</label>
+                                    <select id="book-guests" name="guests" class="form-control">
+                                        <option value="" disabled selected>Select guest count</option>
+                                        <option value="1-50">1 – 50 guests</option>
+                                        <option value="51-100">51 – 100 guests</option>
+                                        <option value="101-200">101 – 200 guests</option>
+                                        <option value="201-500">201 – 500 guests</option>
+                                        <option value="500+">500+ guests</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 3: Special Requirements -->
+                        <div style="margin-bottom:36px;">
+                            <h4
+                                style="font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--dark); margin-bottom:20px; padding-bottom:12px; border-bottom:2px solid var(--champagne);">
+                                📝 Special Requirements
+                            </h4>
+                            <div class="form-group" style="margin-bottom:0;">
+                                <label for="book-requirements">Tell Us More About Your Event</label>
+                                <textarea id="book-requirements" name="requirements" class="form-control" rows="5"
+                                    placeholder="Describe any special requirements, themes, preferences, dietary needs, or anything else we should know..."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Terms -->
+                        <div
+                            style="display:flex; align-items:flex-start; gap:12px; margin-bottom:28px; padding:16px; background:var(--gray-light); border-radius:var(--radius);">
+                            <input type="checkbox" id="book-terms" name="terms" required
+                                style="width:18px; height:18px; accent-color:var(--gold); flex-shrink:0; margin-top:2px; cursor:pointer;" />
+                            <label for="book-terms"
+                                style="font-size:0.88rem; color:var(--gray-mid); cursor:pointer; line-height:1.6;">
+                                I agree to the <a href="#" style="color:var(--gold); font-weight:600;">Terms &
+                                    Conditions</a> and <a href="#" style="color:var(--gold); font-weight:600;">Privacy
+                                    Policy</a>. I understand that submitting this form initiates a consultation process
+                                and does not guarantee booking until confirmed by Djm events.
+                            </label>
+                        </div>
+
+                        <!-- Submit -->
+                        <button type="submit" class="btn btn-primary form-submit" id="booking-submit-btn"
+                            style="font-size:1.05rem; letter-spacing:1.5px;">
+                            ✦ &nbsp; Submit Booking Request
+                        </button>
+
+                        <!-- Success Message -->
+                        <div class="form-success" id="bookingSuccess" style="display:none; margin-top:20px;">
+                            <div style="font-size:2rem; margin-bottom:12px;">🎉</div>
+                            <h4 style="font-family:'Playfair Display',serif; font-size:1.3rem; margin-bottom:8px;">
+                                Booking Request Received!</h4>
+                            <p style="font-size:0.92rem; color:var(--gray-mid);">Thank you, we've received your request.
+                                Our team will contact you within 24 hours to confirm your booking details and discuss
+                                next steps.</p>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="fade-in"
+                style="display:flex; gap:28px; justify-content:center; margin-top:40px; flex-wrap:wrap;"
+                id="trust-badges">
+                <div style="display:flex; align-items:center; gap:10px; color:var(--gray-mid); font-size:0.88rem;">
+                    <span style="font-size:1.3rem;">🔒</span> Secure & Confidential
+                </div>
+                <div style="display:flex; align-items:center; gap:10px; color:var(--gray-mid); font-size:0.88rem;">
+                    <span style="font-size:1.3rem;">⚡</span> 24-Hour Response
+                </div>
+                <div style="display:flex; align-items:center; gap:10px; color:var(--gray-mid); font-size:0.88rem;">
+                    <span style="font-size:1.3rem;">🌟</span> 98% Satisfaction Rate
+                </div>
+                <div style="display:flex; align-items:center; gap:10px; color:var(--gray-mid); font-size:0.88rem;">
+                    <span style="font-size:1.3rem;">💎</span> No Hidden Fees
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon"><img src="images/djmlogo.jpg" alt="Djm Events Logo"></div>
+                        <span class="footer-logo-text">Djm<span>Events</span></span>
+                    </div>
+                    <p class="footer-desc">Turning ordinary moments into extraordinary memories. Your vision is our
+                        masterpiece.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Facebook">&#9426;</a>
+                        <a href="#" class="social-link" aria-label="Instagram">&#9820;</a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="services.html">Services</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="book.html">Book Now</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <div class="footer-links">
+                        <a href="services.html">Wedding Planning</a>
+                        <a href="services.html">Corporate Events</a>
+                        <a href="services.html">Birthday Parties</a>
+                        <a href="services.html">Conferences</a>
+                        <a href="services.html">Decoration & Catering</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <div class="footer-contact-items">
+                        <div class="footer-contact-item">
+                            <div class="footer-ci-icon">📍</div><span>No 211,A2 VNR Tower,Salem Main Road, Krishnagiri -
+                                635001 </span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <div class="footer-ci-icon">✉</div><a
+                                href="mailto:contact@youreventco.com">mano.velan2126@gmail.com</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <div class="footer-ci-icon">📞</div><a href="tel:+11234567890">9578380405</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2026 <a href="index.html">Djm events</a>. All rights reserved.
+                </p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

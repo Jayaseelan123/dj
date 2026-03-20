@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Djm events - Premier event management company specializing in weddings, corporate functions, and private parties. Turning moments into memories." />
+  <title>Djm events | Turning Moments into Memories</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+~
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="Djm events Home">
+        <div class="nav-logo-icon"><img src="images/djmlogo.jpg" alt=""></div>
+        <span class="nav-logo-text">Djm<span>Events</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="categories.html" class="nav-link">Categories</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="book.html" class="btn btn-primary nav-cta">Book Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="slide slide-1"></div>
+      <div class="slide slide-2"></div>
+      <div class="slide slide-3"></div>
+      <div class="slide slide-4"></div>
+      <div class="slide slide-5"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-particles" aria-hidden="true" id="particles"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">✦ &nbsp; Award-Winning Event Planners</div>
+        <h1 class="hero-title">
+          Moments
+          <span class="gold-text">into Memories</span>
+        </h1>
+        
+        <div class="hero-buttons">
+          <a href="book.html" class="btn btn-primary" id="hero-book-btn">
+            <span>✦</span> Book Now
+          </a>
+          <a href="services.html" class="btn btn-outline" id="hero-services-btn">
+            Explore Services
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== STATS BAR ===== -->
+
+
+  <!-- ===== SERVICES HIGHLIGHTS ===== -->
+  <section class="services-highlights section-padding" id="services-highlight">
+    <div class="container">
+      <div class="text-center fade-in">
+        <span class="section-tag">What We Offer</span>
+        <h2 class="section-title">Crafting <span>Extraordinary</span> Experiences</h2>
+        <div class="gold-divider"></div>
+        <p class="section-subtitle">From intimate gatherings to grand celebrations — we bring your vision to life with
+          flawless execution.</p>
+      </div>
+      <div class="services-grid">
+
+        <article class="service-card fade-in" id="service-wedding">
+          <div class="service-card-img-wrap" style="overflow:hidden;">
+            <img src="images/wedding_floral_stage.jpg" alt="Wedding planning services"
+              class="service-card-img" loading="lazy" />
+          </div>
+          <div class="service-card-body">
+            <div class="service-icon">💍</div>
+            <h3>Wedding Planning</h3>
+            <p>Your dream wedding, meticulously crafted from venue selection to the final toast. We handle every magical
+              detail.</p>
+            <a href="services.html#weddings" class="card-arrow">Learn More ›</a>
+          </div>
+        </article>
+
+        <article class="service-card fade-in" id="service-corporate">
+          <div style="overflow:hidden;">
+            <img src="images/dj_full_setup.jpg"
+              alt="Corporate events management" class="service-card-img" loading="lazy" />
+          </div>
+          <div class="service-card-body">
+            <div class="service-icon">🏢</div>
+            <h3>Corporate Events</h3>
+            <p>Professional conferences, product launches, and team events that leave lasting impressions and drive
+              results.</p>
+            <a href="services.html#corporate" class="card-arrow">Learn More ›</a>
+          </div>
+        </article>
+
+        <article class="service-card fade-in" id="service-birthday">
+          <div style="overflow:hidden;">
+            <img src="images/other_stage_singers.jpg" alt="Birthday party planning"
+              class="service-card-img" loading="lazy" />
+          </div>
+          <div class="service-card-body">
+            <div class="service-icon">🎂</div>
+            <h3>Private Parties</h3>
+            <p>Birthdays, anniversaries, and milestone celebrations designed to be as unique and special as you are.</p>
+            <a href="services.html#parties" class="card-arrow">Learn More ›</a>
+          </div>
+        </article>
+
+      </div>
+      <div class="text-center" style="margin-top:48px;">
+        <a href="services.html" class="btn btn-dark" id="all-services-btn">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY US ===== -->
+  <section class="section-padding" style="background: linear-gradient(160deg, var(--champagne) 0%, #fff 60%);"
+    id="why-us">
+    <div class="container">
+      <div class="two-col-grid">
+        <div class="fade-in">
+          <span class="section-tag">Why Choose Us</span>
+          <h2 class="section-title">Event Planning <span>Redefined</span></h2>
+          <div class="gold-divider"></div>
+          <p style="color:var(--gray-mid); margin-bottom:28px; font-size:1rem;">With over 15 years of experience and
+            850+ successful events, we bring unmatched expertise and passion to every occasion.</p>
+          <div class="why-list">
+            <div class="why-item">
+              <div class="why-check">✓</div>
+              <div class="why-item-text">
+                <h5>Personalized Approach</h5>
+                <p>Every event is unique — we tailor every detail to your vision and needs</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-check">✓</div>
+              <div class="why-item-text">
+                <h5>Experienced Team</h5>
+                <p>120+ specialists including planners, decorators, caterers, and coordinators</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-check">✓</div>
+              <div class="why-item-text">
+                <h5>End-to-End Management</h5>
+                <p>From concept to cleanup — we manage everything so you enjoy the moment</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-check">✓</div>
+              <div class="why-item-text">
+                <h5>Transparent Pricing</h5>
+                <p>No hidden costs — clear, competitive packages for every budget</p>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:36px;">
+            <a href="about.html" class="btn btn-primary" id="about-learn-btn">Learn About Us</a>
+          </div>
+        </div>
+        <div class="fade-in" style="position:relative;">
+          <img src="images/concert_djmano_crowd.jpg" alt="Elegant event setup" class="responsive-img-lg"
+            style="width:100%; height:600px; object-fit:cover; border-radius:20px; box-shadow:0 16px 60px rgba(0,0,0,0.2);" loading="lazy" />
+          <div
+            style="position:absolute; top:-20px; left:-20px; background:linear-gradient(135deg,var(--gold),var(--gold-light)); border-radius:16px; padding:20px 24px; box-shadow:var(--shadow-gold);">
+            <span
+              style="font-family:'Playfair Display',serif; font-size:2rem; font-weight:700; color:var(--dark); display:block; line-height:1;">850+</span>
+            <span style="font-size:0.8rem; color:var(--dark-mid); font-weight:600;">Events Planned</span>
+          </div>
+          <div
+            style="position:absolute; bottom:-20px; right:-20px; background:var(--dark); border-radius:16px; padding:20px 24px; box-shadow:var(--shadow-dark); border:1px solid rgba(201,168,76,0.3);">
+            <span
+              style="font-family:'Playfair Display',serif; font-size:2rem; font-weight:700; color:var(--gold); display:block; line-height:1;">98%</span>
+            <span style="font-size:0.8rem; color:rgba(255,255,255,0.6); font-weight:600;">Client Satisfaction</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials section-padding" id="testimonials">
+    <div class="container">
+      <div class="text-center fade-in">
+        <span class="section-tag" style="color:var(--gold-light);">Client Stories</span>
+        <h2 class="section-title" style="color:var(--white);">What Our Clients <span>Say</span></h2>
+        <div class="gold-divider"></div>
+        <p class="section-subtitle" style="color:rgba(255,255,255,0.6);">Real stories from real people who trusted us
+          with their most special moments.</p>
+      </div>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card fade-in" id="testimonial-1">
+          <span class="quote-icon">"</span>
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">Djm events made our wedding day absolutely magical. Every detail was perfect — the
+            flowers, the lighting, the music. Our guests are still talking about it months later!</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">S</div>
+            <div class="author-info">
+              <div class="author-name">Sarah & Michael Chen</div>
+              <div class="author-role">Wedding Clients, 2024</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in" id="testimonial-2">
+          <span class="quote-icon">"</span>
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">Our annual corporate conference was the best yet, thanks to Djm events. Seamless
+            execution, stunning venue setup, and absolutely professional team throughout!</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">R</div>
+            <div class="author-info">
+              <div class="author-name">Robert Williams</div>
+              <div class="author-role">CEO, TechVision Corp</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in" id="testimonial-3">
+          <span class="quote-icon">"</span>
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">From the first consultation to the very last dance, Djm events delivered beyond
+            our expectations. They truly understand how to make memories that last a lifetime.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">A</div>
+            <div class="author-info">
+              <div class="author-name">Amanda Rodriguez</div>
+              <div class="author-role">Private Party Client</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content text-center fade-in">
+        <span class="section-tag">Ready to Begin?</span>
+        <h2 class="cta-title">Let's Create Something <span>Extraordinary</span></h2>
+        <p class="cta-subtitle">Whether it's an intimate gathering or a grand celebration — we're here to bring your
+          vision to life.</p>
+        <div class="cta-buttons">
+          <a href="book.html" class="btn btn-primary" id="cta-book-btn">✦ &nbsp; Book Your Event</a>
+          <a href="contact.html" class="btn btn-outline" id="cta-contact-btn">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-icon"><img src="images/djmlogo.jpg" alt="Djm Events Logo"></div>
+            <span class="footer-logo-text">Djm<span>Events</span></span>
+          </div>
+          <p class="footer-desc">Turning ordinary moments into extraordinary memories. Your vision is our masterpiece.
+          </p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Facebook">&#9426;</a>
+            <a href="#" class="social-link" aria-label="Instagram">&#9820;</a>
+            <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="book.html">Book Now</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <div class="footer-links">
+            <a href="services.html">Wedding Planning</a>
+            <a href="services.html">Corporate Events</a>
+            <a href="services.html">Birthday Parties</a>
+            <a href="services.html">Conferences</a>
+            <a href="services.html">Decoration & Catering</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-items">
+            <div class="footer-contact-item">
+              <div class="footer-ci-icon">📍</div><span>No 211,A2 VNR Tower,Salem Main Road, Krishnagiri - 635001
+              </span>
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-ci-icon">✉</div><a href="mailto:contact@youreventco.com">mano.velan2126@gmail.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-ci-icon">📞</div><a href="tel:+11234567890">9578380405</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 <a href="index.html">Djm events</a>. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
