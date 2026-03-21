@@ -698,7 +698,7 @@ button {
 
 /* ===================== TESTIMONIALS ===================== */
 .testimonials {
-  background: linear-gradient(160deg, var(--dark) 0%, var(--dark-mid) 100%);
+  background: none;
 }
 
 .testimonials-grid {
@@ -708,18 +708,18 @@ button {
 }
 
 .testimonial-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(201, 168, 76, 0.2);
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
   border-radius: var(--radius-lg);
   padding: 36px 32px;
   position: relative;
   transition: var(--transition);
-  backdrop-filter: blur(10px);
 }
 
 .testimonial-card:hover {
-  background: rgba(201, 168, 76, 0.08);
-  border-color: rgba(201, 168, 76, 0.5);
+  border-color: rgba(201, 168, 76, 0.4);
+  box-shadow: var(--shadow-gold);
   transform: translateY(-6px);
 }
 
@@ -734,7 +734,7 @@ button {
 }
 
 .testimonial-text {
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--gray-mid);
   font-size: 0.97rem;
   line-height: 1.8;
   font-style: italic;
@@ -766,7 +766,7 @@ button {
 
 
 .author-name {
-  color: var(--white);
+  color: var(--dark);
   font-weight: 600;
   font-size: 0.95rem;
 }

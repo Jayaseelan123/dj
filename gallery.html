@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Djm events - Gallery. View our portfolio of successful events." />
+  <title>Djm events | Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .page-hero-gallery {
+      position: relative;
+      height: 40vh;
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-top: 80px;
+      /* Offset for navbar */
+      background: linear-gradient(135deg, var(--dark) 0%, var(--black) 100%);
+    }
+
+    .page-title {
+      position: relative;
+      z-index: 2;
+      color: var(--white);
+      text-align: center;
+    }
+
+    .page-title h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      margin-bottom: 10px;
+      font-family: "Playfair Display", serif;
+    }
+
+    .page-title p {
+      color: var(--gold);
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .gallery-section {
+      padding: 80px 0;
+      background: var(--white);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+      padding: 20px 0;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      aspect-ratio: 4/3;
+      position: relative;
+      background: var(--gray-light);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .gallery-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .gallery-item:hover::after {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar scrolled" id="navbar" style="background: rgba(13, 13, 13, 0.97);">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="Djm events Home">
+        <div class="nav-logo-icon"><img src="images/djmlogo.png" alt="" height="50px" width="50px"></div>
+        <span class="nav-logo-text">Djm<span>Events</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="categories.html" class="nav-link">Categories</a></li>
+        <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="book.html" class="btn btn-primary nav-cta">Book Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HERO ===== -->
+  <header class="page-hero-gallery">
+    <div class="page-title fade-in">
+      <h1>Our Gallery</h1>
+      <p>Experience The Magic</p>
+    </div>
+  </header>
+
+  <!-- ===== GALLERY SECTION ===== -->
+  <section class="gallery-section">
+    <div class="container">
+      <div class="text-center fade-in" style="margin-bottom: 40px;">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Captured <span>Moments</span></h2>
+        <div class="gold-divider"></div>
+        <p class="section-subtitle">Browse through exactly 20 of our best captured moments from various events we've
+          organized.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- 20 Images exactly as requested -->
+        <div class="gallery-item fade-in"><img src="images/concert_bharadwaj_stage.jpg" alt="Gallery Image 1"
+            loading="lazy"></div>
+        <div class="gallery-item fade-in"><img src="images/concert_djmano_crowd.jpg" alt="Gallery Image 2"
+            loading="lazy"></div>
+        <div class="gallery-item fade-in"><img src="images/concert_heart_stage.jpg" alt="Gallery Image 3"
+            loading="lazy"></div>
+        <div class="gallery-item fade-in"><img src="images/concert_peacock_stage.jpg" alt="Gallery Image 4"
+            loading="lazy"></div>
+        <div class="gallery-item fade-in"><img src="images/concert_performers_blue.jpg" alt="Gallery Image 5"
+            loading="lazy"></div>
+        <div class="gallery-item fade-in"><img src="images/concert_venue_front.jpg" alt="Gallery Image 6"
+            loading="lazy"></div>
+        <div class="gallery-item fade-in"><img src="images/concert_venue_street.jpg" alt="Gallery Image 7"
+            loading="lazy"></div>
+        <div class="gallery-item fade-in"><img src="images/dj_console_setup.jpg" alt="Gallery Image 8" loading="lazy">
+        </div>
+        <div class="gallery-item fade-in"><img src="images/dj_full_setup.jpg" alt="Gallery Image 9" loading="lazy">
+        </div>
+        <div class="gallery-item fade-in"><img src="images/dj_honeycomb_setup.jpg" alt="Gallery Image 10"
+            loading="lazy"></div>
+        <div class="gallery-item fade-in"><img src="images/dj_led_dance_floor.jpg" alt="Gallery Image 11"
+            loading="lazy"></div>
+        <div class="gallery-item fade-in"><img src="images/dj_led_floor_blue.jpg" alt="Gallery Image 12" loading="lazy">
+        </div>
+        <div class="gallery-item fade-in"><img src="images/other_bouncers.jpg" alt="Gallery Image 13" loading="lazy">
+        </div>
+        <div class="gallery-item fade-in"><img src="images/other_diya_dance.jpg" alt="Gallery Image 14" loading="lazy">
+        </div>
+        <div class="gallery-item fade-in"><img src="images/other_event_security.jpg" alt="Gallery Image 15"
+            loading="lazy"></div>
+        <div class="gallery-item fade-in"><img src="images/other_folk_dance.jpg" alt="Gallery Image 16" loading="lazy">
+        </div>
+        <div class="gallery-item fade-in"><img src="images/other_live_band.jpg" alt="Gallery Image 17" loading="lazy">
+        </div>
+        <div class="gallery-item fade-in"><img src="images/other_singers_duo.jpg" alt="Gallery Image 18" loading="lazy">
+        </div>
+        <div class="gallery-item fade-in"><img src="images/other_small_band.jpg" alt="Gallery Image 19" loading="lazy">
+        </div>
+        <div class="gallery-item fade-in"><img src="images/other_stage_singers.jpg" alt="Gallery Image 20"
+            loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content text-center fade-in">
+        <span class="section-tag">Ready to Begin?</span>
+        <h2 class="cta-title">Let’s Create Something <span>Amazing</span></h2>
+        <p class="cta-subtitle">Whether it’s an intimate celebration or a grand international event — DJM Events & Entertainments delivers elegance, energy, and excellence.<br>✨ Serving clients across <strong>India</strong> and <strong>worldwide</strong>, we create experiences without boundaries.</p>
+        <div class="cta-buttons">
+          <a href="book.html" class="btn btn-primary">✦ &nbsp; Book Your Event</a>
+          <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-icon"><img src="images/djmlogo.png" alt="Djm Events Logo"></div>
+            <span class="footer-logo-text">Djm<span>Events</span></span>
+          </div>
+          <p class="footer-desc">Turning ordinary moments into extraordinary memories. Your vision is our masterpiece.
+          </p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Facebook">&#9426;</a>
+            <a href="#" class="social-link" aria-label="Instagram">&#9820;</a>
+            <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+            <a href="book.html">Book Now</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <div class="footer-links">
+            <a href="services.html">Wedding Planning</a>
+            <a href="services.html">Corporate Events</a>
+            <a href="services.html">Birthday Parties</a>
+            <a href="services.html">Conferences</a>
+            <a href="services.html">Decoration & Catering</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-items">
+            <div class="footer-contact-item">
+              <div class="footer-ci-icon">📍</div><span>No 211,A2 VNR Tower,Salem Main Road, Krishnagiri - 635001</span>
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-ci-icon">✉</div><a href="mailto:contact@youreventco.com">mano.velan2126@gmail.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-ci-icon">📞</div><a href="tel:+11234567890">9578380405</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 <a href="index.html">Djm events</a>. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
