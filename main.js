@@ -43,27 +43,42 @@
 
   hamburger.addEventListener("click", function () {
     const isOpen = navLinks.classList.toggle("open");
+    hamburger.classList.toggle("open"); // For CSS animation
     hamburger.setAttribute("aria-expanded", isOpen);
+    
+    // Toggle overlay if exists
+    const overlay = document.querySelector(".nav-overlay");
+    if (overlay) overlay.classList.toggle("active", isOpen);
+    
     document.body.style.overflow = isOpen ? "hidden" : "";
   });
 
   // Close when a nav link is clicked
   navLinks.querySelectorAll(".nav-link").forEach((link) => {
     link.addEventListener("click", () => {
-      navLinks.classList.remove("open");
-      hamburger.setAttribute("aria-expanded", "false");
-      document.body.style.overflow = "";
+      closeMenu();
     });
   });
 
-  // Close on outside click
+  // Close on outside click or overlay click
   document.addEventListener("click", function (e) {
-    if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
-      navLinks.classList.remove("open");
-      hamburger.setAttribute("aria-expanded", "false");
-      document.body.style.overflow = "";
+    const overlay = document.querySelector(".nav-overlay");
+    if (
+      (!navLinks.contains(e.target) && !hamburger.contains(e.target)) ||
+      e.target === overlay
+    ) {
+      closeMenu();
     }
   });
+
+  function closeMenu() {
+    navLinks.classList.remove("open");
+    hamburger.classList.remove("open");
+    hamburger.setAttribute("aria-expanded", "false");
+    const overlay = document.querySelector(".nav-overlay");
+    if (overlay) overlay.classList.remove("active");
+    document.body.style.overflow = "";
+  }
 })();
 
 // ===== INTERSECTION OBSERVER: Fade-in animations =====
@@ -295,19 +310,49 @@
       return;
     }
 
-    // Submit simulation
-    btn.textContent = "Submitting...";
+    // Gather form data
+    const fullName = document.getElementById("book-fullname").value;
+    const email = document.getElementById("book-email").value;
+    const phone = document.getElementById("book-phone").value;
+    const eventType = document.getElementById("book-event-type").value;
+    const date = document.getElementById("book-date").value;
+    const location = document.getElementById("book-location").value;
+    const guests = document.getElementById("book-guests").value;
+    const requirements = document.getElementById("book-requirements").value;
+
+    // Construct WhatsApp message
+    const message = `*Booking Inquiry from Djm Events*\n` +
+      `---------------------------------\n` +
+      `👤 *Name:* ${fullName}\n` +
+      `✉ *Email:* ${email}\n` +
+      `📞 *Phone:* ${phone}\n` +
+      `🎉 *Event:* ${eventType}\n` +
+      `📅 *Date:* ${date}\n` +
+      `📍 *Location:* ${location}\n` +
+      `👥 *Guests:* ${guests || "Not specified"}\n` +
+      `📝 *Requirements:* ${requirements || "No special requests"}`;
+
+    // Encode message for URL
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/919578380405?text=${encodedMessage}`;
+
+    // Submit animation
+    btn.textContent = "Redirecting to WhatsApp...";
     btn.disabled = true;
     btn.style.opacity = "0.75";
     if (progressFill) progressFill.style.width = "100%";
 
     setTimeout(function () {
+      // Open WhatsApp in a new tab
+      window.open(whatsappUrl, "_blank");
+
+      // Show success message and hide form
       form.style.display = "none";
       if (successMsg) {
         successMsg.style.display = "block";
         successMsg.scrollIntoView({ behavior: "smooth", block: "center" });
       }
-    }, 1600);
+    }, 1200);
   });
 })();
 

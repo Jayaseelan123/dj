@@ -25,8 +25,10 @@
         .booking-section::before {
             content: '';
             position: absolute;
-            width: 800px;
-            height: 800px;
+            width: 80vw;
+            height: 80vw;
+            max-width: 800px;
+            max-height: 800px;
             border-radius: 50%;
             background: radial-gradient(circle, rgba(201, 168, 76, 0.07) 0%, transparent 70%);
             top: 50%;
@@ -67,10 +69,44 @@
             width: 0%;
             transition: width 0.8s ease;
         }
+
+        .whatsapp-btn-container {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background-color: #25D366;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            color: white;
+        }
+
+        .whatsapp-btn i {
+            font-size: 1.4rem;
+        }
     </style>
 </head>
 
 <body>
+    <div class="nav-overlay"></div>
 
     <!-- ===== NAVBAR ===== -->
     <nav class="navbar scrolled" id="navbar">
@@ -86,7 +122,7 @@
                 <li><a href="categories.html" class="nav-link">Categories</a></li>
                 <li><a href="gallery.html" class="nav-link">Gallery</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
-                <li><a href="book.html" class="btn btn-primary nav-cta active">Book Now</a></li>
+                <li><a href="https://wa.me/919578380405?text=Hi,%20I'd%20like%20to%20book%20an%20event%20with%20Djm%20Events." target="_blank" class="btn btn-primary nav-cta active">Book Now</a></li>
             </ul>
             <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
                 <span></span><span></span><span></span>
@@ -104,6 +140,12 @@
                     <div class="booking-header-icon">✦</div>
                     <h2>Book Your Event</h2>
                     <p>Fill in the details below and we'll reach out within 24 hours to confirm.</p>
+                    <div class="whatsapp-btn-container">
+                        <a href="https://wa.me/919578380405?text=Hi,%20I'd%20like%20to%20book%20an%20event%20with%20Djm%20Events."
+                            class="whatsapp-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Chat with us on WhatsApp
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Body -->
@@ -126,7 +168,7 @@
                         <!-- Section 1: Personal Info -->
                         <div style="margin-bottom:36px;">
                             <h4
-                                style="font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--dark); margin-bottom:20px; padding-bottom:12px; border-bottom:2px solid var(--champagne);">
+                                style="font-family:'Open Sans',sans-serif; font-size:1.1rem; color:var(--dark); margin-bottom:20px; padding-bottom:12px; border-bottom:2px solid var(--champagne);">
                                 👤 Personal Information
                             </h4>
                             <div class="form-row">
@@ -160,7 +202,7 @@
                         <!-- Section 2: Event Details -->
                         <div style="margin-bottom:36px;">
                             <h4
-                                style="font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--dark); margin-bottom:20px; padding-bottom:12px; border-bottom:2px solid var(--champagne);">
+                                style="font-family:'Open Sans',sans-serif; font-size:1.1rem; color:var(--dark); margin-bottom:20px; padding-bottom:12px; border-bottom:2px solid var(--champagne);">
                                 🎉 Event Details
                             </h4>
                             <div class="form-row">
@@ -211,7 +253,7 @@
                         <!-- Section 3: Special Requirements -->
                         <div style="margin-bottom:36px;">
                             <h4
-                                style="font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--dark); margin-bottom:20px; padding-bottom:12px; border-bottom:2px solid var(--champagne);">
+                                style="font-family:'Open Sans',sans-serif; font-size:1.1rem; color:var(--dark); margin-bottom:20px; padding-bottom:12px; border-bottom:2px solid var(--champagne);">
                                 📝 Special Requirements
                             </h4>
                             <div class="form-group" style="margin-bottom:0;">
@@ -244,7 +286,7 @@
                         <!-- Success Message -->
                         <div class="form-success" id="bookingSuccess" style="display:none; margin-top:20px;">
                             <div style="font-size:2rem; margin-bottom:12px;">🎉</div>
-                            <h4 style="font-family:'Playfair Display',serif; font-size:1.3rem; margin-bottom:8px;">
+                            <h4 style="font-family:'Open Sans',sans-serif; font-size:1.3rem; margin-bottom:8px;">
                                 Booking Request Received!</h4>
                             <p style="font-size:0.92rem; color:var(--gray-mid);">Thank you, we've received your request.
                                 Our team will contact you within 24 hours to confirm your booking details and discuss
@@ -285,7 +327,7 @@
                     & Entertainments delivers elegance, energy, and excellence.<br>✨ Serving clients across
                     <strong>India</strong> and <strong>worldwide</strong>, we create experiences without boundaries.</p>
                 <div class="cta-buttons">
-                    <a href="book.html" class="btn btn-primary">✦ &nbsp; Book Your Event</a>
+                    <a href="https://wa.me/919578380405?text=Hi,%20I'd%20like%20to%20book%20an%20event%20with%20Djm%20Events." target="_blank" class="btn btn-primary">✦ &nbsp; Book Your Event</a>
                     <a href="contact.html" class="btn btn-outline">Get in Touch</a>
                 </div>
             </div>
@@ -317,7 +359,7 @@
                         <a href="services.html">Services</a>
                         <a href="gallery.html">Gallery</a>
                         <a href="contact.html">Contact</a>
-                        <a href="book.html">Book Now</a>
+                        <a href="https://wa.me/919578380405?text=Hi,%20I'd%20like%20to%20book%20an%20event%20with%20Djm%20Events." target="_blank">Book Now</a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -358,6 +400,12 @@
             </div>
         </div>
     </footer>
+
+    <!-- Floating WhatsApp Icon -->
+    <a href="https://wa.me/919578380405?text=Hi,%20I'd%20like%20to%20book%20an%20event%20with%20Djm%20Events."
+        class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script src="main.js"></script>
 </body>
