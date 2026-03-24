@@ -10,87 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    .page-hero-gallery {
-      position: relative;
-      height: 40vh;
-      min-height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      margin-top: 80px;
-      /* Offset for navbar */
-      background: linear-gradient(135deg, var(--dark) 0%, var(--black) 100%);
-    }
 
-    .page-title {
-      position: relative;
-      z-index: 2;
-      color: var(--white);
-      text-align: center;
-    }
-
-    .page-title h1 {
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      margin-bottom: 10px;
-      font-family: "Open Sans", sans-serif;
-    }
-
-    .page-title p {
-      color: var(--gold);
-      font-size: 1.1rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-weight: 600;
-    }
-
-    .gallery-section {
-      padding: 80px 0;
-      background: var(--white);
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 24px;
-      padding: 20px 0;
-    }
-
-    .gallery-item {
-      overflow: hidden;
-      border-radius: var(--radius);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-      aspect-ratio: 4/3;
-      position: relative;
-      background: var(--gray-light);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.08);
-    }
-
-    .gallery-item::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, transparent 50%);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      pointer-events: none;
-    }
-
-    .gallery-item:hover::after {
-      opacity: 1;
-    }
-  </style>
 </head>
 
 <body>
@@ -118,10 +38,18 @@
   </nav>
 
   <!-- ===== PAGE HERO ===== -->
-  <header class="page-hero-gallery">
-    <div class="page-title fade-in">
-      <h1>Our Gallery</h1>
-      <p>Experience The Magic</p>
+  <header class="page-hero" id="gallery-hero">
+    <div class="page-hero-bg" style="background-image: url('images/erded.jpeg');"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="container">
+      <div class="page-hero-content">
+        <h1 class="page-hero-title">Our <span>Gallery</span></h1>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">›</span>
+          <span>Gallery</span>
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -214,7 +142,8 @@
               target="_blank"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/djm_events_entertainments?igsh=MTl5a3ZiZHJpZGw0OA==" class="social-link"
               aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-link" aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://youtube.com/@djmeventsentertainment?si=QRsMMKzPq7EUzdyQ" class="social-link"
+              aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
         <div class="footer-col">
