@@ -2769,3 +2769,23 @@ footer {
 .team-card:nth-child(5) {
   margin-right: auto;
 }
+@media (max-width: 576px) {
+    .team-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .team-card {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Reset desktop positioning */
+    .team-card:nth-child(4),
+    .team-card:nth-child(5) {
+        grid-column: auto;
+        justify-self: center;
+    }
+}
